@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>char count</title>
+
+    <style>
+        .top{
+            background: linear-gradient(32deg, #000000 55%,#f79503 30%);
+            opacity: 85%;
+            
+        }
+        
+        .main{
+            width: 500px;
+            height: 200px;
+            background-color: white;
+            padding: 50px;
+            border-radius: 20px;
+            position: relative;
+            margin-left: 25%;
+            margin-top: 10%;
+            text-align: center;
+            
+        }
+        #mybox{
+            width: 300px;
+            height: 100px;
+        }
+        #head{
+            position: relative;
+            margin-top: 0;
+        }
+
+        #{
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body class="top">
+    <div class="main">
+        <h3 id="head">Message Box (200 character Max Limit)</h3>
+        <textarea name="textarea" id="mybox" placeholder="Enter your Text"></textarea>
+        <p id="count">0/200 character</p>
+        <p id="war"></p>
+    </div>
+
+
+
+    <script>
+        var box=document.getElementById("mybox")
+        var count=document.getElementById("count")
+        var alert=document.getElementById("war")
+
+        mybox.addEventListener("keypress",function(){
+            var charcount = box.value.length
+            if(charcount <= 200){
+                count.textContent = +charcount +"/200 character"  
+            }
+            else{
+                war.textContent = "You have reached Character count Limit"
+                mybox.disabled = true;
+            }
+        })
+    </script>
+    
+</body>
+</html>
+
+
+
